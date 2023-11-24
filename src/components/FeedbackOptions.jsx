@@ -1,3 +1,4 @@
+import './FeedbackOptions.css';
 const FeedbackOptions = ({ options, onHandleClick }) => (
   <>
     {options.map((btn, idx) => (
@@ -7,8 +8,9 @@ const FeedbackOptions = ({ options, onHandleClick }) => (
         onClick={() => {
           onHandleClick(btn);
         }}
+        className="btns"
       >
-        {btn.charAt(0).toUpperCase() + btn.slice(1)}
+        {btn}
       </button>
     ))}
   </>
